@@ -1,0 +1,22 @@
+.peopleSay > .inner > * {
+  border: 1px solid tomato;
+}
+.peopleSay > .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleSay .titleContent {
+  display: flex-start;
+  margin-bottom: 10rem;
+}
+
+.swiper-slide {
+  background-color: antiquewhite;
+  height: auto;
+}
+
+.comment {
+  display: flex;
+}

@@ -1,0 +1,257 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600;700&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+  font-size: 10px;
+  --color-mb: #527ceb;
+  --color-bp: #3c2b4a;
+  --color-lg: #5f5f5f;
+  --color-iv: #fff8f3;
+  --color-sp: #ffd7d7;
+  --color-sb: #e7f4f5;
+  --color-wh: #ffffff;
+}
+
+body {
+  color: #5f5f5f;
+  font-family: 'Lexend Deca';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 146.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3c2b4a;
+  font-family: 'Cormorant Infant';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+h1 {
+  font-size: 75px;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 35px;
+}
+h5 {
+  font-size: 30px;
+}
+h6 {
+  font-size: 25px;
+}
+
+/* wrap > hd > mw > h1 + .gnb + ham */
+/* .wrap {
+  overflow: hidden;
+} */
+
+.hd {
+  border: 1px solid red;
+  z-index: 999;
+}
+
+.mw {
+  border: 1px solid blue;
+  max-width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* logo */
+.hd > .mw > h1 > a {
+  display: flex;
+  border: 1px solid red;
+  width: 30.3rem;
+}
+
+.hd > .mw > .gnb {
+  border: 1px solid red;
+  height: 9.2rem;
+  padding: 2.9rem 0rem;
+}
+.hd > .mw > .gnb > a {
+  font-size: 2rem;
+  padding: 0 3.2rem;
+  font-style: normal;
+  color: #2f2f2f;
+}
+
+.hd > .mw > .ham {
+  display: none;
+}
+
+section {
+  position: relative;
+  border: 1px solid tomato;
+  margin-bottom: 40rem;
+}
+
+/* mainVisual 섹션 */
+section .bg {
+  border: 1px solid purple;
+  border-radius: 4.5rem;
+  background: #eef2fd;
+  width: 174.8rem;
+  height: 54.4rem;
+
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 8.9rem;
+
+  /* 기준 바뀜 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 꾸밈 요소 */
+.mainVisual {
+  padding-bottom: 20rem;
+}
+section .bg::before,
+section .bg::after {
+  content: '';
+  position: absolute;
+  background-color: #fedcff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+/* 작은원 */
+section .bg::before {
+  width: 11.6rem;
+  height: 11.6rem;
+  left: 15.5rem;
+  bottom: 7.2rem;
+}
+/* 큰원 */
+section .bg::after {
+  width: 114.6rem;
+  height: 114.6rem;
+  bottom: 7.6rem;
+  left: 71.5rem;
+}
+
+.mainVisual .bg img {
+  height: 4.8rem;
+  padding-right: 2.8rem;
+}
+
+section .bg span {
+  z-index: 2;
+}
+
+/* c-pattern ~ 순서대로 위치 조정 */
+.mainVisual img[alt='c-pattern'] {
+  position: absolute;
+  top: 6.6rem;
+  left: 28.4rem;
+}
+.mainVisual img[alt='polygon-1'] {
+  position: absolute;
+  top: 60.7rem;
+  right: 13.22rem;
+}
+.mainVisual img[alt='polygon-2'] {
+  position: absolute;
+  top: 7.71rem;
+  right: 38.8rem;
+}
+.mainVisual img[alt='pattern'] {
+  position: absolute;
+  left: 16rem;
+  top: 70.7rem;
+}
+.mainVisual .titleBox::before {
+  content: '';
+  width: 41.2rem;
+  height: 41.2rem;
+  position: absolute;
+  border-radius: 41.2rem;
+  background: #e3f5ff;
+  bottom: -12.2rem;
+}
+
+/* titleBox */
+.mainVisual .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20.3rem;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  overflow: visible;
+}
+.mainVisual .titleBox .DisplayText {
+  display: flex;
+  width: 131.9rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4.6rem;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
+  backdrop-filter: blur(42.5px);
+  padding: 8.95rem 10.15rem;
+}
+.mainVisual .titleBox .DisplayText p {
+  padding-bottom: 4rem;
+  font-family: 'Cormorant Infant';
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
+
+.mainVisual .titleBox .DisplayText p > span {
+  color: var(--color-mb);
+}
+.mainVisual .titleBox .DisplayText .btnBlue {
+  display: flex;
+  padding: 2.8rem 6.3rem;
+  border-radius: 20rem;
+  background: #527ceb;
+  border: none;
+}
+.mainVisual .titleBox .DisplayText .btnBlue h6 {
+  color: white;
+}
+.inner .scroll {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18rem;
+  z-index: 10;
+}
+.inner .scroll::after {
+  content: url(../img/mainVisual/mouse-scroll.svg);
+  position: absolute;
+  display: flex;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

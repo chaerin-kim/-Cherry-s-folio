@@ -16,42 +16,31 @@
       referrerpolicy="no-referrer"
     />
 
-
     <!-- 내가 만든 css -->
     <link rel="stylesheet" href="./css/common.css" />
-    
+    <link rel="stylesheet" href="./css/myWork.css" />
+    <link rel="stylesheet" href="./css/resume.css" />
+
     <script src="./js/common.js" defer></script>
   </head>
 
-  
   <body>
     <div class="wrap">
       <header class="hd">
-        <div class="bg"></div>        
-        <nav class="mw">
+        <nav class="inner mw">
           <h1>
-            <a href="#"><span>🍒</span><img src="img/cherrys-folio_logo.svg" alt="메인로고" /></a>
+            <a href="#"
+              ><img src="img/cherry-pick_logo.svg" alt="메인로고"
+            /></a>
           </h1>
 
           <ul class="gnb">
-            <li>
-              <a href="#">Home</a>              
-            </li>
-            <li>
-              <a href="#">Work</a>
-              <ul class="sub">
-                <li><a href="#">project1</a></li>
-                <li><a href="#">project2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">about</a>              
-            </li>
-            <li>
-              <a href="#">Touch</a>              
-            </li>          
+            <a href="#">Home</a>
+            <a href="#">Work</a>
+            <a href="#">about</a>
+            <a href="#">Touch</a>
           </ul>
-          
+
           <!-- 햄버거바 -->
           <div class="ham">
             <a href="#"><i class="fa-solid fa-bars"></i></a>
@@ -59,257 +48,101 @@
         </nav>
       </header>
 
-<!-- mainVisual 섹션 -->
+      <!-- mainVisual 섹션 -->
       <section class="mainVisual">
-
-        <div class="inner mw">
-
-          <div class="background">
-            <!-- 꾸밈 요소 -->
-            <div class="patterns">
-              <img src="img/mainVisual/big-circle-patttern.png" alt="큰원">
-              <img src="img/mainVisual/c-pattern.svg" alt="C자">
-              <img src="img/mainVisual/small-circle-patttern.svg" alt="작은원">
-              <img src="img/mainVisual/polygon-2.svg" alt="삼각형1">
-              <img src="img/mainVisual/pattern.svg" alt="점들">
-              <img src="img/mainVisual/polygon-1.svg" alt="삼각형2">
-              <img src="img/mainVisual/" alt="중앙원">
-            </div>
+        <div class="inner">
+          <h2 class="bg">
+            <span
+              ><img
+                src="./img/mainVisual/Sign of the Horns.svg"
+                alt="emoji"
+              />Hello World!</span
+            >
+          </h2>
+          <img src="./img/mainVisual/c-pattern.svg" alt="c-pattern" />
+          <img src="./img/mainVisual/polygon-1.svg" alt="polygon-1" />
+          <img src="./img/mainVisual/polygon-2.svg" alt="polygon-2" />
+          <img src="./img/mainVisual/pattern.svg" alt="pattern" />
+          <!-- title 에 투명 박스 넣어야함// 그림자 효과 '백드랍필터- 블러'처리 -->
+          <div class="titleBox mw">
+            <span class="DisplayText">
+              <p>
+                Let's explore the coding space.<br />
+                I’m <span>Frontend Dev.</span><br />
+              </p>
+              <p>Welcome to Cherry-pick!</p>
+              <button class="btnBlue"><h6>More Information</h6></button>
+            </span>
           </div>
-
-          <h2 >Hi, I'm cherry kim</h2>
-          
-          <!-- title 에 투명 박스 넣어야함 -->
-          <div class="titleBox bigSize">
-            <p class="Display Text">
-              Creative<span>Design<span>,<br/>
-              Innovative <span>Development</span><br/>
-              <br/>
-              Welcome to Cherry’s folio.
-            </p>
-            
-            <button class="btnBlue">More Information</button>            
-          </div>
-          
-        
+          <span class="scroll">scroll Down</span>
         </div>
       </section>
 
-<!-- myWork 섹션 -->
+      <!-- myWork 섹션 -->
       <section class="myWork">
-        <div class="inner mw">
+        <div class="mw">
           <h2>My Work</h2>
 
-          <ul class="spaceList">
+          <ul class="workList">
             <li>
-              <h3>App Desing<br/>Buzzy</h3>
+              <h3>App Desing<br />Buzzy</h3>
               <img src="/img/MyWork/Buzzy.png" alt="버찌메인" />
             </li>
             <li>
-              <h3>App Design<br/>DABAN</h3>
+              <h3>App Design<br />DABAN</h3>
               <img src="/img/MyWork/DABAN.png" alt="다반메인" />
             </li>
             <li>
-              <h3>App Design<br/>Cat Delivery</h3>
-              <img src="/img/MyWork/고양이 배달부 이미지.png" alt="고양이배달부메인" />
+              <h3>App Design<br />Cat Delivery</h3>
+              <img src="/img/MyWork/catDelivery.png" alt="고양이배달부메인" />
             </li>
             <li>
-              <h3>Redesign of Google's Chrome<br/>Enterprise website.</h3>
-              <img src="/img/MyWork/image-15.png" alt="메인4" />
+              <h3>Redesign of Google's Chrome<br />Enterprise website.</h3>
+              <img src="/img/MyWork/work4.png" alt="메인4" />
             </li>
             <li>
-              <h3>Website design & development<br/> for the MAMBO.</h3>
-              <img src="/img/MyWork/image-12.png" alt="메인5" />
+              <h3>
+                Website design & development<br />
+                for the MAMBO.
+              </h3>
+              <img src="/img/MyWork/work5.png" alt="메인5" />
             </li>
             <li>
-              <h3>Think with Google<br/> interactive experience.</h3>
-              <img src="/img/MyWork/image-8.png" alt="메인6" />
+              <h3>
+                Think with Google<br />
+                interactive experience.
+              </h3>
+              <img src="/img/MyWork/work6.png" alt="메인6" />
             </li>
-
           </ul>
           <!-- More Work 버튼 부분 -->
           <a href="#" class="moreCurcle">More Work</a>
         </div>
       </section>
 
-<!-- resume 섹션 -->
+      <!-- resume 섹션 -->
       <section class="resume">
         <div class="inner mw">
           <h2>
-            Currently looking for a <span style="color: grey;">work-study contract </span>(alternance) in
-            Product Design for January 2024! Feel free to <span>download my resume</span> and contact me,<br/> 
+            Currently looking for a
+            <span style="color: grey">work-study contract </span>(alternance) in
+            Product Design for January 2024! Feel free to
+            <span>download my resume</span> and contact me,<br />
             I’m always available to chat.
           </h2>
-        </div>
 
-        <img src="./img/our-center-img.svg" alt="우리지역" />
-        <a href="#" class="moreCurcle">Contact Me</a>
-        <a href="#" class="moreCurcle">About Us</a>
-        
-        <div class="gradientCircle"></div>
-        <!-- 내 프로필 사진 들어가는 부분 -->
-        <div class="squareImage"><img src="img/resume/photo1.jpg" alt="myPhoto"></div>
-      </section>
+          <a href="#" class="moreCurcle">Contact Me</a>
+          <a href="#" class="moreCurcle">About Us</a>
 
-<!-- peopleSay섹션 -->
-      <section class="peopleSay">
-
-        <div class="inner mw">
-
-          <div class="background">
-            <!-- 꾸밈 요소/ 직접 만들어야하나? -->
-            <div class="patterns">
-              <img src="img/peopleSay/bigCircle.png" alt="큰원">        
-              <img src="img/peopleSay//small-circle-patttern.svg" alt="작은원">        
-              <img src="img/peopleSay/middleCircle.png" alt="중앙원">        
-            </div>
+          <!-- -> 그라디언트 써클 가상요소로 만들기 -->
+          <!-- 내 프로필 사진 들어가는 부분 -->
+          <div class="squareImage">
+            <img src="img/resume/photo1.jpg" alt="myPhoto" />
           </div>
-          <!-- 백그라운드 위의 타이틀  -->
-          <div class="titleContent">
-            <h2 >What People Are Saying<br/>About My Work</h2>
-            <i class="prev"><img src="/img/peopleSay/prevVector.svg" alt="prvBtn"></i>
-            <i class="next"><img src="/img/peopleSay/nextVector.svg" alt="nextBtn"></i>
-          </div>
-          
-          
-          <!-- title 에 투명 박스 넣어야함 -->
-          <div class="titleBox smallSize">
-
-            <div class="circleImage"><img src="img/peopleSay/photo.jpg" alt="othersPhoto"></div>
-            <div class="name">
-              <h4>Sylvester Stallone</h4>
-              <span>Designer</span>
-              <img src="img/peopleSay/doubleComma.svg" alt="doubleCommaImage">
-              <p>"It is professional, considers everyone's time, can think about the whole problem and <b>not only in a small niche</b>, friendly, , and UX. Personally, as a founder of the company."</p>
-            </div>      
-
-          </div>
-            
-            
-          
-        
         </div>
       </section>
 
-<!-- clientLogo 섹션 / 이건 섹션이 맞나? -->
-      <section class="clientLogo">
-        <div class="logo">
-          <img src="img/clientLogo/1.svg" alt="ModernHOME">
-          <img src="img/clientLogo/2.svg" alt="VS">
-          <img src="img/clientLogo/3.svg" alt="BRAND">
-          <img src="img/clientLogo/4.svg" alt="NatureHome">
-          <img src="img/clientLogo/5.svg" alt="ClassicDS">
-        </div>
-
-      </section>
-
-<!-- Latest Articles 섹션 -->
-      <section class="Blog">
-
-        <div class="BlogTitle">
-          <h3>Latest Articles</h3>
-          <a href="#">More Articles</a>
-        </div>
-
-        <div class="BlogCards">
-          <div class="cardBox">
-
-            <figure class="card">
-
-              <div class="img">
-                <img src="img/Blog/photo.png" alt="카드1이미지" />
-              </div>
-              
-              <figcaption class="cardContents">        
-                <time>November 05-22</time>
-                <h3>What's the name of your organization?</h3>
-                <p>It is professional, considers everyone's time, can think about the whole problem and  friendly founder company.</p>
-                <span>Continue Reading</span>
-              </figcaption>
-            </figure>
-
-            <figure class="card">
-
-              <div class="img">
-                <img src="img/Blog/photo1.png" alt="카드2이미지" />
-              </div>
-              
-              <figcaption class="cardContents">        
-                <time>November 05-22</time>
-                <h3>What's the name of your organization?</h3>
-                <p>It is professional, considers everyone's time, can think about the whole problem and  friendly founder company.</p>
-                <span>Continue Reading</span>
-              </figcaption>
-            </figure>
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-      <footer> 
-        <div class="inner mw">
-          <div class="background">
-            <!-- 꾸밈 요소 -->
-            <div class="patterns">
-              <img src="img/mainVisual/small-circle-patttern.svg" alt="작은원">
-              <img src="img/mainVisual/small-circle-patttern.svg" alt="작은원">        
-              <img src="img/mainVisual/polygon-1.svg" alt="삼각형2">
-              <img src="img/mainVisual/" alt="중앙원">
-            </div>
-          </div>
-          
-          <!-- title 에 투명 박스 넣어야함 -->
-          <div class="titleBox middleSize">
-            <h1>Let’s work together</h1>
-            <input type="email" value="your maill Address">    
-            <button class="btnBlue notradius">Subscribe</button>            
-          </div>
-
-          <!-- 아래 최종 설명 -->
-          <span>🍒</span><img src="img/cherrys-folio_logo.svg" alt="메인로고" />
-          <!-- 이것보다 좋은 방법이 없나? -->
-          <ul class="detailList">
-            <li>
-              <a href="#">Home</a>              
-            </li>
-            <li>
-              <a href="#">Work</a>        
-            </li>
-            <li>
-              <a href="#">Style Guide</a>              
-            </li>
-            <li>
-              <a href="#">Lisences</a>              
-            </li>          
-            <li>
-              <a href="#">Chengelog</a>              
-            </li>          
-            <li>
-              <a href="#">Facebook</a>              
-            </li>          
-            <li>
-              <a href="#">Instagram</a>              
-            </li>          
-            <li>
-              <a href="#">Twitter</a>              
-            </li>          
-          </ul>
-
-          <!-- 카피라이트 특수 기호 넣어야하나? -->
-          <span class="copyright">
-            Copyright © Designerz | Designed by VictorFlow Templates - Powered by Webflow
-          </span>
-          
-        
-        </div>
-
-      </footer>
-  
-  
-  
+      <!-- peopleSay섹션 -->
     </div>
   </body>
 </html>

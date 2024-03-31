@@ -1,0 +1,73 @@
+.myWork mw {
+  text-align: center;
+}
+
+.myWork h2 {
+  text-align: center;
+  padding-bottom: 9rem;
+}
+.myWork .workList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 2rem 5.9rem;
+}
+.myWork .workList li {
+  width: 60rem;
+  height: 45.4rem;
+  border-radius: 3.4rem;
+  padding-top: 6.2rem;
+
+  display: block;
+  text-align: center;
+}
+.myWork .workList li:nth-child(1) {
+  background-color: #f1eaff;
+}
+.myWork .workList li:nth-child(2) {
+  background-color: #ffe3db;
+}
+.myWork .workList li:nth-child(3) {
+  background-color: #fff8f3;
+}
+.myWork .workList li:nth-child(4) {
+  background-color: #d4ecdf;
+}
+.myWork .workList li:nth-child(5) {
+  background-color: #f1eaff;
+}
+.myWork .workList li:nth-child(6) {
+  background-color: #ddebff;
+}
+
+.myWork .workList li h3 {
+  text-align: start;
+  padding: 0 0 2.3rem 8.8rem;
+}
+.myWork .workList li img {
+  text-align: center;
+  border-radius: 3rem;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+/* 짝수 번째 li들이 아래로 내려감 */
+.myWork .workList li:nth-child(even) {
+  margin-top: 19.6rem;
+  margin-bottom: 19.6rem;
+}
+
+.myWork .moreCurcle {
+  padding: 2.8rem 6.3rem;
+  display: inline-block;
+
+  border-radius: 20rem;
+  border: 1px solid var(--color-bp);
+}
+
+/* 반응형일때 1510아래로 가운데 정렬하는 방법 + 천천히 이동하는 ani 을 알려주세요*/
+@media (max-width: 1510px) {
+  .myWork .workList {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
