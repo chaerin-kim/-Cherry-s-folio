@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cherry's folio</title>
+    <title>Cherry's folio 복사본</title>
     <link rel="stylesheet" href="./css/my_reset.css" />
 
     <!-- 아이콘을 위한 폰트 어썸 -->
@@ -20,7 +20,14 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/myWork.css" />
     <link rel="stylesheet" href="./css/resume.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/peopleSay.css" />
+    <link rel="stylesheet" href="./css/Blog.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/common.js" defer></script>
   </head>
 
@@ -74,7 +81,6 @@
               <button class="btnBlue"><h6>More Information</h6></button>
             </span>
           </div>
-          <span class="scroll">scroll Down</span>
         </div>
       </section>
 
@@ -123,18 +129,18 @@
       <!-- resume 섹션 -->
       <section class="resume">
         <div class="inner mw">
-          <h2>
-            Currently looking for a
-            <span style="color: grey">work-study contract </span>(alternance) in
-            Product Design for January 2024! Feel free to
-            <span>download my resume</span> and contact me,<br />
-            I’m always available to chat.
-          </h2>
-
-          <a href="#" class="moreCurcle">Contact Me</a>
-          <a href="#" class="moreCurcle">About Us</a>
-
-          <!-- -> 그라디언트 써클 가상요소로 만들기 -->
+          <div class="cvContents">
+            <h2>
+              Currently looking for a job! <br />
+              Please <span>download my CV</span> and<br />
+              contact me.<br />
+              I’m always available to chat.
+            </h2>
+            <span class="cvBtn">
+              <a href="#" class="contact">Contact Me</a>
+              <a href="#" class="download">Download CV</a>
+            </span>
+          </div>
           <!-- 내 프로필 사진 들어가는 부분 -->
           <div class="squareImage">
             <img src="img/resume/photo1.jpg" alt="myPhoto" />
@@ -143,6 +149,128 @@
       </section>
 
       <!-- peopleSay섹션 -->
+      <section class="peopleSay">
+        <div class="inner mw">
+          <h2 class="bg">What People Are Saying<br />About My Work</h2>
+
+          <!-- title 에 투명 박스 넣어야함 -->
+          <div class="swiper slide mw">
+            <div class="swiper-wrapper titleBox">
+              <div class="swiper-slide DisplayText">
+                <div class="circleImage">
+                  <img src="img/peopleSay/photo.jpg" alt="othersPhoto" />
+                </div>
+                <div class="people1">
+                  <div class="name">
+                    <h4>Sylvester Stallone</h4>
+                    <span>Designer</span>
+                  </div>
+                  <img
+                    src="img/peopleSay/doubleComma.svg"
+                    alt="doubleCommaImage"
+                  />
+                  <p>
+                    "It is professional, considers everyone's time, can think
+                    about the whole problem and
+                    <b>not only in a small niche</b>, friendly, , and UX.
+                    Personally, as a founder of the company."
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide DisplayText">
+                <div class="circleImage">
+                  <img src="img/peopleSay/photo.jpg" alt="othersPhoto" />
+                </div>
+                <div class="people1">
+                  <div class="name">
+                    <h4>Sylvester Stallone</h4>
+                    <span>Designer</span>
+                  </div>
+                  <img
+                    src="img/peopleSay/doubleComma.svg"
+                    alt="doubleCommaImage"
+                  />
+                  <p>
+                    "It is professional, considers everyone's time, can think
+                    about the whole problem and
+                    <b>not only in a small niche</b>, friendly, , and UX.
+                    Personally, as a founder of the company."
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide DisplayText">
+                <div class="circleImage">
+                  <img src="img/peopleSay/photo.jpg" alt="othersPhoto" />
+                </div>
+                <div class="people1">
+                  <div class="name">
+                    <h4>Sylvester Stallone</h4>
+                    <span>Designer</span>
+                  </div>
+                  <img
+                    src="img/peopleSay/doubleComma.svg"
+                    alt="doubleCommaImage"
+                  />
+                  <p>
+                    "It is professional, considers everyone's time, can think
+                    about the whole problem and
+                    <b>not only in a small niche</b>, friendly, , and UX.
+                    Personally, as a founder of the company."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next next1"></div>
+          <div class="swiper-button-prev prev1"></div>
+        </div>
+      </section>
+
+      <!-- Latest Articles 섹션/ 내가 작성하는 블로그나 노션으로 링크 걸기-->
+      <section class="Blog">
+        <div class="mw">
+          <div class="BlogTitle">
+            <h2>Latest Articles</h2>
+            <a href="#">More Articles</a>
+          </div>
+
+          <div class="BlogCards">
+            <div class="cardBox">
+              <figure class="card1">
+                <img src="img/Blog/photo.png" alt="카드1이미지" />
+
+                <figcaption class="cardContents">
+                  <time>November 05-22</time>
+                  <h3>What's the name of your organization?</h3>
+                  <p>
+                    It is professional, considers everyone's time, can think
+                    about the whole problem and friendly founder company.
+                  </p>
+                  <span>Continue Reading</span>
+                </figcaption>
+              </figure>
+
+              <figure class="card2">
+                <img src="img/Blog/photo1.png" alt="카드2이미지" />
+
+                <figcaption class="cardContents">
+                  <time>November 05-22</time>
+                  <h3>What's the name of your organization?</h3>
+                  <p>
+                    It is professional, considers everyone's time, can think
+                    about the whole problem and friendly founder company.
+                  </p>
+                  <span>Continue Reading</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
     </div>
   </body>
 </html>

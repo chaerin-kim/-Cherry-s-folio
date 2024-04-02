@@ -1,0 +1,59 @@
+.Blog .BlogTitle {
+  display: flex;
+}
+
+.Blog .BlogTitle {
+  justify-content: space-between;
+}
+
+.Blog .BlogTitle a {
+  border-radius: 20rem;
+  border: 1px solid var(--color-bp);
+  padding: 2.8rem 5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Blog .BlogCards .cardBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5.4rem;
+}
+
+.card1,
+.card2 {
+  background-color: #f9f9f9;
+  width: 48%;
+  position: relative;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.cardBox > .card1:hover,
+.cardBox > .card2:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.444)
+}
+.card1 img,
+.card2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.BlogCards .cardContents {
+  padding: 5.6rem 4.8rem;
+  text-align: left;
+}
+
+.BlogCards .cardContents time {
+  color: var(--color-mb);
+  padding-bottom: 1.6rem;
+  display: block;
+}
+.BlogCards .cardContents h3 {
+  padding-bottom: 1.8rem;
+}
+.BlogCards .cardContents p {
+  padding-bottom: 4rem;
+}

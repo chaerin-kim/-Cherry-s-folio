@@ -1,16 +1,18 @@
-.myWork mw {
+.myWork .mw {
   text-align: center;
 }
 
-.myWork h2 {
+.myWork .mw h2 {
   text-align: center;
   padding-bottom: 9rem;
 }
-.myWork .workList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.myWork .mw .workList {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem 5.9rem;
+  padding: 8rem;
 }
 .myWork .workList li {
   width: 60rem;
@@ -64,10 +66,23 @@
   border: 1px solid var(--color-bp);
 }
 
-/* 반응형일때 1510아래로 가운데 정렬하는 방법 + 천천히 이동하는 ani 을 알려주세요*/
-@media (max-width: 1510px) {
-  .myWork .workList {
-    grid-template-columns: 1fr;
+/* 반응형일때 1510아래로 가운데 정렬하는 방법(현재는flex-wrap으로 해결했으나, grid 일때 어떻게하는지)
+  + 천천히 합쳐지는 keyframes 을 알려주세요*/
+@media (max-width: 1920px) {
+  .myWork .mw .workList {
     justify-content: center;
+    align-items: center;
   }
+  /* .myWork .workList li {
+    animation: up linear;
+  } */
 }
+
+/* @keyframes up {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+} */
