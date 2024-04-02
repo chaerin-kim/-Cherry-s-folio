@@ -54,9 +54,6 @@ h6 {
 }
 
 /* wrap > hd > mw > h1 + .gnb + ham */
-/* .wrap {
-  overflow: hidden;
-} */
 
 .hd {
   border: 1px solid red;
@@ -73,6 +70,7 @@ h6 {
 .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 /* logo */
 .hd > .mw > h1 > a {
@@ -93,8 +91,11 @@ h6 {
   color: #2f2f2f;
 }
 
-.hd > .mw > .ham {
+.hd .ham {
+  display: flex;
+  align-items: center;
   display: none;
+  font-size: 4.8rem;
 }
 
 section {
@@ -224,7 +225,6 @@ section .titleBox .DisplayText {
   font-weight: 700;
   line-height: 120%;
   text-align: center;
-
 }
 
 .mainVisual .titleBox .DisplayText p > span {
@@ -252,4 +252,57 @@ section .titleBox .DisplayText {
   bottom: -7rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1300px) {
+  /* 헤더반응형 */
+  .mainVisual .bg {
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  section .bg::after {
+    left: 14.66rem;
+  }
+  .mainVisual img[alt='polygon-1'] {
+    right: 4.08rem;
+  }
+  .mainVisual img[alt='polygon-2'] {
+    right: 4.08rem;
+  }
+
+  .mainVisual img[alt='c-pattern'] {
+    left: -4.03rem;
+  }
+  .mainVisual img[alt='pattern'] {
+    left: 2.03rem;
+  }
+
+  /* 햄버거 */
+  .hd .gnb {
+    display: none;
+  }
+  .hd .ham {
+    display: block;
+  }
+
+  .mainVisual .titleBox .DisplayText p {
+    font-size: 3.5rem;
+  }
+
+  /* .resume 이미지 위치 조정 */
+  .resume .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume .cvContents {
+    order: 2;
+  }
+  .resume .squareImage {
+    order: 1;
+    margin-bottom: 3rem;
+  }
+  .peopleSay {
+    display: none;
+  }
 }
