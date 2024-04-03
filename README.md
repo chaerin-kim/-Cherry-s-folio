@@ -10,8 +10,8 @@
 |🕸️ Website |https://chaerin-kim.github.io/Cherry-pick/|
 
 
-### 📷 제작된 이미지
-![cherryPick](https://github.com/chaerin-kim/Cherry-pick/assets/82197400/c9f1da42-0a27-49da-8350-fa33bb8bed64)
+### 📷 목업
+![MacBook16_cherry-pick](https://github.com/chaerin-kim/Cherry-pick/assets/82197400/b6b65001-840c-49fa-8646-d0fd681bc428)
 
 
 
