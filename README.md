@@ -6,8 +6,8 @@
 
 | 분류 | 링크 주소 |
 |----------|----------|
-| 🎨 Figma |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
-| 🕸️ Website |https://chaerin-kim.github.io/Cherry-pick/|
+|🎨 Figma |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
+|🕸️ Website |https://chaerin-kim.github.io/Cherry-pick/|
 
 
 ### 📷 제작된 이미지
