@@ -11,7 +11,8 @@
 
 
 ### 📷 제작된 이미지
-![Uploading cherryPick.png…]()
+![cherryPick](https://github.com/chaerin-kim/Cherry-pick/assets/82197400/c9f1da42-0a27-49da-8350-fa33bb8bed64)
+
 
 
 
