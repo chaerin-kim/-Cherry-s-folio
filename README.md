@@ -4,10 +4,10 @@
 
 ## 🔗 시안 확인 링크
 
-|⭐ 분류|🔗 GitHub 주소|
+| 분류 | 링크 주소 |
 |----------|----------|
-| 🎨 Figma Link |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
-| 🕸️ Website Link |채워 넣을 예정|
+| 🎨 Figma |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
+| 🕸️ Website |채워 넣을 예정|
 
 ### 📷 제작된 이미지
 - 추가 예정
