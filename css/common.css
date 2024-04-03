@@ -186,6 +186,7 @@ section .bg::after {
   border-radius: 41.2rem;
   background: #e3f5ff;
   bottom: -12.2rem;
+  z-index: -4;
 }
 
 /* titleBox */
