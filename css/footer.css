@@ -45,18 +45,18 @@ footer .bgSky::after {
 }
 
 /* arrow */
-footer .DisplayText::before {
-  content: url(./img/footer/Arrow1.svg);
+footer .DisplayText::after {
+  content: url(../img/footer/Arrow.svg);
   position: absolute;
   counter-reset: var(--color-mb);
   top: -10rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -10;
+  z-index: 10;
 }
 
 /* 핑크색 작은 원2 */
-footer .DisplayText::after {
+footer .DisplayText::before {
   content: '';
   width: 18.6rem;
   height: 18.6rem;
