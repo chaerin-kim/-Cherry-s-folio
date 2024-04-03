@@ -3,24 +3,28 @@
   overflow: hidden;
 }
 .peopleSay .inner {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .peopleSay .bg {
   background-color: #ffebe5;
   text-align: left;
   justify-content: flex-start;
-  padding-left: 15%;
+  padding-left: 20%;
   padding-top: 19.3rem;
 
   /* 기준 바뀜 */
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
-
+/* 작은 원 */
 .peopleSay .bg::before {
   background-color: #fedcff;
 }
+/* 큰 원 */
 .peopleSay .bg::after {
   background-color: #ffdada;
   z-index: -3;
@@ -29,7 +33,8 @@
 .peopleSay .slide {
   position: absolute;
   top: 41.3rem;
-  max-width: 70%;
+  border-radius: 4.8rem;
+  box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
 }
 
 .peopleSay .titleBox .DisplayText {
@@ -57,7 +62,6 @@
 .swiper-button-prev {
   color: var(--color-wh);
 }
-
 .peopleSay .next1,
 .peopleSay .prev1 {
   position: absolute;
@@ -66,14 +70,19 @@
   width: 7.6rem;
   height: 7.6rem;
   border-radius: 50%;
-  left: 80%;
+  left: 76%;
   transform: translateX(40%);
 }
 .peopleSay .prev1 {
   transform: translateX(calc(50% - 100px));
 }
-
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: large;
+}
+
+@media screen and (max-width: 1300px) {
+  .peopleSay {
+    display: none;
+  }
 }

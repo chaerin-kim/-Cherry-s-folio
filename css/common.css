@@ -54,14 +54,11 @@ h6 {
 }
 
 /* wrap > hd > mw > h1 + .gnb + ham */
-
 .hd {
-  border: 1px solid red;
   z-index: 999;
 }
 
 .mw {
-  border: 1px solid blue;
   max-width: 70%;
   margin: auto;
   text-align: center;
@@ -75,12 +72,10 @@ h6 {
 /* logo */
 .hd > .mw > h1 > a {
   display: flex;
-  border: 1px solid red;
   width: 30.3rem;
 }
 
 .hd > .mw > .gnb {
-  border: 1px solid red;
   height: 9.2rem;
   padding: 2.9rem 0rem;
 }
@@ -91,6 +86,10 @@ h6 {
   color: #2f2f2f;
 }
 
+.hd .gnb a:hover {
+  color: var(--color-mb);
+}
+
 .hd .ham {
   display: flex;
   align-items: center;
@@ -98,20 +97,18 @@ h6 {
   font-size: 4.8rem;
 }
 
+footer,
 section {
   position: relative;
-  border: 1px solid tomato;
   margin-bottom: 20rem;
 }
 
 /* mainVisual 섹션 */
 section .bg {
-  border: 1px solid purple;
   border-radius: 4.5rem;
   background: #eef2fd;
   width: 174.8rem;
   height: 54.4rem;
-
   display: flex;
   justify-content: center;
   left: 50%;
@@ -154,8 +151,7 @@ section .bg::after {
   height: 4.8rem;
   padding-right: 2.8rem;
 }
-
-section .bg span {
+.mainVisual .bg span {
   z-index: 2;
 }
 
@@ -177,9 +173,11 @@ section .bg span {
 }
 .mainVisual img[alt='pattern'] {
   position: absolute;
-  left: 16rem;
+  left: 10rem;
   top: 70.7rem;
 }
+
+/* 중앙 scroll down 원 */
 .mainVisual .titleBox::before {
   content: '';
   width: 41.2rem;
@@ -193,7 +191,6 @@ section .bg span {
 /* titleBox */
 .mainVisual .titleBox {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -202,9 +199,8 @@ section .bg span {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-
-  overflow: visible;
 }
+
 section .titleBox .DisplayText {
   display: flex;
   width: 100%;
@@ -215,18 +211,19 @@ section .titleBox .DisplayText {
   background: rgba(255, 255, 255, 0.35);
   box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
   backdrop-filter: blur(42.5px);
-  padding: 8.95rem 10.15rem;
+  padding: 8.9rem 10.1rem;
 }
 .mainVisual .titleBox .DisplayText p {
   padding-bottom: 4rem;
   font-family: 'Cormorant Infant';
-  font-size: 7.5rem;
+  font-size: 6rem;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
   text-align: center;
 }
 
+/* more Information 버튼 */
 .mainVisual .titleBox .DisplayText p > span {
   color: var(--color-mb);
 }
@@ -241,12 +238,14 @@ section .titleBox .DisplayText {
   color: white;
 }
 
-.DisplayText::before {
+/* scroll down부분  */
+section .DisplayText::before {
   content: 'Scroll down';
   position: absolute;
   bottom: -10rem;
+  color: var(--color-bp);
 }
-.DisplayText::after {
+section .DisplayText::after {
   content: url(../img/mainVisual/mouse-scroll.svg);
   position: absolute;
   bottom: -7rem;
@@ -254,9 +253,9 @@ section .titleBox .DisplayText {
   transform: translateX(-50%);
 }
 
+/* 헤더반응형 */
 @media screen and (max-width: 1300px) {
-  /* 헤더반응형 */
-  .mainVisual .bg {
+  section .bg {
     border-radius: 0;
     margin: 0 auto;
   }
@@ -277,10 +276,19 @@ section .titleBox .DisplayText {
     left: 2.03rem;
   }
 
-  /* 햄버거 */
   .hd .gnb {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 60px;
+    z-index: 1000;
+    height: 10rem;
   }
+
   .hd .ham {
     display: block;
   }
@@ -288,21 +296,15 @@ section .titleBox .DisplayText {
   .mainVisual .titleBox .DisplayText p {
     font-size: 3.5rem;
   }
+}
 
-  /* .resume 이미지 위치 조정 */
-  .resume .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 430px) {
+  body {
+    width: 170%;
   }
-  .resume .cvContents {
-    order: 2;
-  }
-  .resume .squareImage {
-    order: 1;
-    margin-bottom: 3rem;
-  }
-  .peopleSay {
-    display: none;
+
+  .hd .mw,
+  section .mw {
+    max-width: 80%;
   }
 }

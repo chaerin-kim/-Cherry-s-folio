@@ -1,27 +1,23 @@
-.myWork .mw {
-  text-align: center;
-}
-
 .myWork .mw h2 {
   text-align: center;
   padding-bottom: 9rem;
 }
-.myWork .mw .workList {
-  display: flex;
-  /* flex-direction: column; */
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 8rem;
-}
-.myWork .workList li {
-  width: 60rem;
-  height: 45.4rem;
-  border-radius: 3.4rem;
-  padding-top: 6.2rem;
 
-  display: block;
-  text-align: center;
+.myWork .workList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5.9rem;
+}
+
+.myWork .workList li {
+  width: 100%;
+  height: 30rem;
+  border-radius: 3.4rem;
+  padding-top: 4rem;
+}
+
+.myWork .workList li:nth-child(3) {
+  margin-right: 0;
 }
 .myWork .workList li:nth-child(1) {
   background-color: #f1eaff;
@@ -44,18 +40,19 @@
 
 .myWork .workList li h3 {
   text-align: start;
-  padding: 0 0 2.3rem 8.8rem;
+  padding: 0 0 2.3rem 5rem;
 }
 .myWork .workList li img {
   text-align: center;
   border-radius: 3rem;
-  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  background: lightgray 50% cover no-repeat;
+  width: 40rem;
 }
 
 /* 짝수 번째 li들이 아래로 내려감 */
 .myWork .workList li:nth-child(even) {
   margin-top: 19.6rem;
-  margin-bottom: 19.6rem;
+  margin-bottom: 20rem;
 }
 
 .myWork .moreCurcle {
@@ -66,23 +63,19 @@
   border: 1px solid var(--color-bp);
 }
 
-/* 반응형일때 1510아래로 가운데 정렬하는 방법(현재는flex-wrap으로 해결했으나, grid 일때 어떻게하는지)
-  + 천천히 합쳐지는 keyframes 을 알려주세요*/
-@media (max-width: 1920px) {
-  .myWork .mw .workList {
-    justify-content: center;
-    align-items: center;
+/* 반응형일때 한줄로 */
+@media (max-width: 1050px) {
+  .myWork .workList {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
   }
-  /* .myWork .workList li {
-    animation: up linear;
-  } */
-}
+  .myWork .workList li {
+    height: 30rem;
+  }
 
-/* @keyframes up {
-  from {
-    transform: translateY(-50px);
+  .myWork .workList li h3 {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 2rem;
   }
-  to {
-    transform: translateY(0);
-  }
-} */
+}

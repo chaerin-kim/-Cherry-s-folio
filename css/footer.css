@@ -1,0 +1,203 @@
+/* Footer */
+footer {
+  position: relative;
+  margin-top: 10rem;
+  padding: 0 2rem; /* 좌우 여백 추가 */
+}
+
+footer .bgSky {
+  border-radius: 4.5rem;
+  background: #bff4ff;
+  width: calc(100% - 4rem); /* 전체 너비에서 좌우 여백 제외 */
+  height: 53.6rem;
+  position: absolute;
+  z-index: -10;
+  top: 35rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 가운데 원 */
+footer .bgSky::before {
+  content: '';
+  position: absolute;
+  width: 41.2rem;
+  height: 41.2rem;
+  border-radius: 41.2rem;
+  background-color: #e3f5ff;
+  top: -30rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+}
+
+/* 보라색 작은 원1 */
+footer .bgSky::after {
+  content: '';
+  width: 18.6rem;
+  height: 18.6rem;
+  position: absolute;
+  top: 26rem;
+  left: 40rem;
+  border-radius: 50%;
+  background-color: #e1dcff;
+  z-index: -1;
+}
+
+/* arrow */
+footer .DisplayText::before {
+  content: url(/img/footer/Arrow\ 1.svg);
+  position: absolute;
+  counter-reset: var(--color-mb);
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+}
+
+/* 핑크색 작은 원2 */
+footer .DisplayText::after {
+  content: '';
+  width: 18.6rem;
+  height: 18.6rem;
+  position: absolute;
+  bottom: -19.4rem;
+  right: 0rem;
+  border-radius: 50%;
+  background-color: #ffdce9;
+}
+
+footer .DisplayText {
+  display: flex;
+  width: 100%;
+  display: block;
+  align-items: center;
+  border-radius: 4.6rem;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
+  backdrop-filter: blur(42.5px);
+  padding: 13.2rem 2rem; /* 좌우 여백 추가 */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -25%;
+  z-index: 10;
+}
+
+footer .DisplayText h1 {
+  white-space: nowrap;
+}
+
+footer h1 {
+  padding-bottom: 3.7rem;
+}
+
+/* input 버튼 */
+footer input,
+footer button {
+  font-family: 'Lexend Deca';
+  font-size: 1.8rem;
+  font-style: normal;
+  gap: 0;
+}
+
+footer input {
+  border: none;
+  padding: 2.8rem 1.5rem; /* 상하 여백은 그대로 유지하고 좌우 여백 조정 */
+  border-radius: 50rem 0 0 50rem;
+  color: var(--color-lg);
+  margin-right: -6px;
+}
+
+footer button {
+  border: none;
+  padding: 2.8rem 1.5rem; /* 상하 여백은 그대로 유지하고 좌우 여백 조정 */
+  border-radius: 0 50rem 50rem 0;
+  color: var(--color-wh);
+  background-color: var(--color-mb);
+}
+
+/* logo */
+footer .bgSky > img[alt='메인로고'] {
+  position: absolute;
+  top: 36rem;
+  left: 26rem;
+}
+
+footer .bgSky .detailList {
+  position: absolute;
+  display: flex;
+  gap: 3rem;
+  top: 40rem;
+  right: 34rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1260px) {
+  footer .bgSky > img[alt='메인로고'] {
+    top: 36rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  footer .bgSky .detailList {
+    top: 34rem;
+    right: 50%;
+    transform: translate(50%, 80%);
+    bottom: 6rem;
+    font-size: 3rem;
+  }
+  footer .bgSky::after {
+    top: 16rem;
+    left: 18rem;
+  }
+
+  footer .DisplayText::after {
+    bottom: -23rem;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  footer {
+    margin-top: 5rem;
+  }
+
+  footer .bgSky {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  footer .DisplayText {
+    padding: 6rem 1rem;
+    top: -20%;
+  }
+
+  footer .DisplayText h1 {
+    white-space: unset;
+  }
+
+  footer .bgSky > img[alt='메인로고'] {
+    top: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  footer .bgSky .detailList {
+    top: 34rem;
+    right: 50%;
+    transform: translate(50%, 80%);
+    bottom: 6rem;
+    font-size: 3rem;
+  }
+  footer .bgSky::after {
+    top: 16rem;
+    left: 18rem;
+  }
+
+  footer .DisplayText::after {
+    bottom: -21rem;
+  }
+}

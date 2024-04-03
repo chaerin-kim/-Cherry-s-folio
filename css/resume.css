@@ -1,5 +1,4 @@
 .resume {
-  z-index: -10;
   background: rgb(246, 246, 246);
   background: linear-gradient(
     180deg,
@@ -9,14 +8,15 @@
   );
 }
 .resume .inner {
-  justify-content: center;
   padding: 27.2rem 0 27.2rem 0;
+  justify-content: center;
 }
 .resume .cvContents {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-right: 6rem;
+  width: 69.4rem;
 }
 .resume .cvContents h2 {
   text-align: start;
@@ -27,7 +27,9 @@
 }
 
 /* 다운로드 버튼영역 */
-.resume .cvContents > span {
+.resume .cvContents .cvBtn {
+  display: flex;
+  flex-direction: row;
   padding-top: 3rem;
   gap: 2rem;
   flex-wrap: wrap;
@@ -40,7 +42,10 @@
   flex: 1;
 }
 
-/* 호버시 컬러나오게 -- 왜 안되지? */
+.resume .cvContents .cvBtn {
+  display: inline;
+}
+/* 호버시 컬러나오게 */
 .resume .cvContents span .contact:hover,
 .resume .cvContents span .download:hover {
   background-color: var(--color-mb) !important;
@@ -48,12 +53,11 @@
 }
 
 /* img */
-
 .squareImage img {
-  border: 1px solid red;
   height: 48.6rem;
   border-radius: 3rem;
   z-index: 3;
+  position: relative;
 }
 .squareImage::before {
   content: '';
@@ -70,13 +74,46 @@
   border-radius: 33.9rem;
   position: absolute;
   top: 13.6rem;
-  right: 32.4rem;
-  z-index: -1;
+  right: 16rem;
+  animation: moveUpDown 3s infinite alternate;
 }
 
-@media (max-width: 1650px) {
-  .resume .cvContents span {
+/* 애니메이션 키프레임 정의 */
+@keyframes moveUpDown {
+  0% {
+    top: 13.6rem;
+  }
+  50% {
+    top: 40rem;
+  }
+  100% {
+    top: 13.6rem;
+  }
+}
+
+@media (max-width: 1470px) {
+  .resume .cvContents .cvBtn {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* 헤더반응형 */
+@media screen and (max-width: 1300px) {
+  /* .resume 이미지 위치 조정 */
+  .resume .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume .cvContents {
+    order: 2;
+    align-items: center;
+    padding-left: 6rem;
+
+  }
+  .resume .squareImage {
+    order: 1;
+    margin-bottom: 3rem;
   }
 }
