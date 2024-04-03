@@ -4,17 +4,11 @@
 
 ## 🔗 시안 확인 링크
 
-<<<<<<< HEAD
-|⭐ 분류|🔗 GitHub 주소|
-|----------|----------|
-| 🎨 Figma Link |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
-| 🕸️ Website Link |채워 넣을 예정|
-=======
 | 분류 | 링크 주소 |
 |----------|----------|
 | 🎨 Figma |https://www.figma.com/file/xgoBk6e1jXoR58gdPLlcyO/HRD?type=design&node-id=113%3A828&mode=design&t=zQdYc5wHq9Y00dw6-1|
 | 🕸️ Website |https://chaerin-kim.github.io/Cherry-pick/|
->>>>>>> 6de46681390415b9f8c9b8b19febb12d41d696ef
+
 
 ### 📷 제작된 이미지
 - 추가 예정
