@@ -46,7 +46,7 @@ footer .bgSky::after {
 
 /* arrow */
 footer .DisplayText::before {
-  content: url(./img/footer/Arrow\ 1.svg);
+  content: url(./img/footer/Arrow1.svg);
   position: absolute;
   counter-reset: var(--color-mb);
   top: -10rem;
