@@ -90,7 +90,8 @@ footer .DisplayText h1 {
 }
 
 footer h1 {
-  padding-bottom: 3.7rem;
+  padding-bottom: 5rem;
+  font-size: 5rem;
 }
 
 /* input 버튼 */

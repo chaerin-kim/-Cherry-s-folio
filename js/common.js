@@ -1,32 +1,22 @@
 /* 햄버거바 */
 const hamBtn = document.querySelector('.ham');
+const closeBtn = document.querySelector('.close');
 const gnb = document.querySelector('.gnb');
-const overlay = document.createElement('div'); // 오버레이 생성
-
+// .ham 누르면
 hamBtn.addEventListener('click', () => {
-  if (gnb.style.display === 'none') {
-    // 햄버거 버튼 클릭 시 .gnb 요소가 나타남
-    gnb.style.display = 'block';
-    overlay.style.position = 'fixed';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; 
-    overlay.style.zIndex = '999'; 
-    document.body.appendChild(overlay); 
-  } else {
-    gnb.style.display = 'none';
-    overlay.remove();
-  }
+  gnb.classList.add('on');
+  closeBtn.classList.add('on');
+  hamBtn.style.display = 'none';
+  gnb.classList.add('blur'); // 가상 요소에 블러 클래스 추가
 });
 
-// 오버레이를 클릭하면 gnb이 사라지도록 함
-overlay.addEventListener('click', () => {
-  gnb.style.display = 'none';
-  overlay.remove();
+// .close 누르면
+closeBtn.addEventListener('click', () => {
+  gnb.classList.remove('on');
+  closeBtn.classList.remove('on');
+  hamBtn.style.display = 'flex';
+  gnb.classList.remove('blur'); // 가상 요소의 블러 클래스 제거
 });
-
 
 // .peopleSay  swiper
 let slide = new Swiper('.slide', {

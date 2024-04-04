@@ -78,23 +78,28 @@ h6 {
 .hd > .mw > .gnb {
   height: 9.2rem;
   padding: 2.9rem 0rem;
+  background-color: #ffff;
 }
 .hd > .mw > .gnb > a {
   font-size: 2rem;
   padding: 0 3.2rem;
   font-style: normal;
   color: #2f2f2f;
+  background-color: var(--color-wh);
 }
 
 .hd .gnb a:hover {
   color: var(--color-mb);
 }
 
-.hd .ham {
+/* 햄버거바 부분 */
+.hd .icon {
   display: flex;
-  align-items: center;
+  justify-items: center;
+  color: var(--color-lg);
+  font-size: 4rem;
+  z-index: 200;
   display: none;
-  font-size: 4.8rem;
 }
 
 footer,
@@ -255,7 +260,7 @@ section .DisplayText::after {
 }
 
 /* 헤더반응형 */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1150px) {
   section .bg {
     border-radius: 0;
     margin: 0 auto;
@@ -277,21 +282,49 @@ section .DisplayText::after {
     left: 2.03rem;
   }
 
-  .hd .gnb {
+  /* 햄버거는 반응형일때 기본으로 보임 */
+  .hd .icon {
+    display: flex;
+  }
+  .hd .icon .close {
     display: none;
+  }
+  /* gnb부분 */
+  .hd > .mw > .gnb {
+    padding: 0;
+  }
+  .hd .gnb {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     right: 0;
     width: 100%;
-    background-color: #fff;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 60px;
-    z-index: 1000;
-    height: 10rem;
+    z-index: 99;
+    display: none;
+  }
+  .gnb.blur::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -10;
+    background-color: rgba(0, 0, 0, 0.5); // 어두운 블러처리
   }
 
-  .hd .ham {
-    display: block;
+  .hd > .mw > .gnb > a {
+    padding: 2.4rem;
+  }
+
+  /* 햄버거바 클릭시 보이게 */
+  .hd .gnb.on {
+    display: flex;
+  }
+  .hd .icon .close.on {
+    display: flex;
   }
 
   .mainVisual .titleBox .DisplayText p {
