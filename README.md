@@ -1,5 +1,5 @@
 # Cherry-pick (반응형 포트폴리오 웹사이트)
-![Logo](https://github.com/chaerin-kim/Cherry-pick/assets/82197400/2da35f47-8067-48ab-a04d-99ed36887ef6)
+<img width="303" alt="Cherry-pick_Logo" src="https://github.com/chaerin-kim/Cherry-pick/assets/82197400/f0d440ee-aa74-4722-8b50-fc64048d06fe">
 
 HTML, CSS 및 JavaScript를 사용하여 만든 첫 번째 포트폴리오 웹사이트 시안입니다.
 바닐라 자바스크립트를 사용하여 직접 코드를 작성하면서 언어를 배우고자 이 웹사이트를 시작하게 되었습니다.
