@@ -52,7 +52,9 @@ h5 {
 h6 {
   font-size: 25px;
 }
-
+.wrap {
+  overflow: hidden;
+}
 /* wrap > hd > mw > h1 + .gnb + ham */
 .hd {
   z-index: 999;
@@ -102,7 +104,6 @@ h6 {
   display: none;
 }
 
-footer,
 section {
   position: relative;
   margin-bottom: 20rem;
@@ -112,7 +113,7 @@ section {
 section .bg {
   border-radius: 4.5rem;
   background: #eef2fd;
-  width: 174.8rem;
+  width: calc(100% - 2rem);
   height: 54.4rem;
   display: flex;
   justify-content: center;
@@ -193,7 +194,9 @@ section .bg::after {
   bottom: -12.2rem;
   z-index: -4;
 }
-
+.titleBox.mw {
+  width: 70% !important;
+}
 /* titleBox */
 .mainVisual .titleBox {
   display: flex;
@@ -263,7 +266,6 @@ section .DisplayText::after {
 @media screen and (max-width: 1150px) {
   section .bg {
     border-radius: 0;
-    margin: 0 auto;
   }
   section .bg::after {
     left: 14.66rem;
@@ -312,7 +314,7 @@ section .DisplayText::after {
     bottom: 0;
     height: 100vh;
     z-index: -10;
-    background-color: rgba(0, 0, 0, 0.5); // 어두운 블러처리
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .hd > .mw > .gnb > a {
@@ -325,20 +327,53 @@ section .DisplayText::after {
   }
   .hd .icon .close.on {
     display: flex;
+    position: fixed;
+    margin-top: -2.4rem;
   }
 
   .mainVisual .titleBox .DisplayText p {
     font-size: 3.5rem;
   }
+  .mainVisual .titleBox .DisplayText .btnBlue {
+    padding: 2rem;
+  }
 }
 
-@media screen and (max-width: 430px) {
-  body {
-    width: 170%;
+@media screen and (max-width: 560px) {
+  h2 {
+    font-size: 4rem;
+    padding-bottom: 3rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.8rem;
+  }
+  h5 {
+    font-size: 2.6rem;
+  }
+  h6 {
+    font-size: 2.4rem;
   }
 
   .hd .mw,
   section .mw {
-    max-width: 80%;
+    width: calc(100% - 2rem);
+    /* max-width: 80%; */
+  }
+
+  .mainVisual .titleBox::before {
+    scale: 0.6;
+    bottom: -24rem;
+  }
+  section .titleBox .DisplayText {
+    padding: 4rem;
+  }
+  .mainVisual img[alt='polygon-1'],
+  .mainVisual img[alt='polygon-2'],
+  .mainVisual img[alt='c-pattern'],
+  .mainVisual img[alt='pattern'] {
+    display: none;
   }
 }

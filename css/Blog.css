@@ -72,8 +72,8 @@
 
 @media (min-width: 1000px) {
   .Blog .BlogTitle {
-    flex-direction: row; /* 1000px 이상에서는 다시 가로로 정렬되도록 설정 */
-    justify-content: space-between; /* 가로 방향으로 여백을 동일하게 배치 */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .Blog .BlogCards .cardBox {
@@ -86,5 +86,26 @@
   .card2 {
     width: 48%;
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Blog .BlogTitle a {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-wrap: nowrap;
+    padding: 2.8rem 6.3rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .Blog .BlogTitle {
+    flex-direction: column;
+  }
+
+  .Blog .BlogCards .cardBox {
+    padding-top: 0;
   }
 }

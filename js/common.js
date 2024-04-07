@@ -4,10 +4,9 @@ const closeBtn = document.querySelector('.close');
 const gnb = document.querySelector('.gnb');
 // .ham 누르면
 hamBtn.addEventListener('click', () => {
-  gnb.classList.add('on');
+  gnb.classList.add('on', 'blur');
   closeBtn.classList.add('on');
   hamBtn.style.display = 'none';
-  gnb.classList.add('blur'); // 가상 요소에 블러 클래스 추가
 });
 
 // .close 누르면

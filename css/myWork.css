@@ -1,6 +1,6 @@
 .myWork .mw h2 {
   text-align: center;
-  padding-bottom: 9rem;
+  padding-bottom: 4rem;
 }
 
 .myWork .workList {
@@ -42,11 +42,14 @@
   text-align: start;
   padding: 0 0 2.3rem 5rem;
 }
+
+/* 강사수정 */
 .myWork .workList li img {
   text-align: center;
   border-radius: 3rem;
   background: lightgray 50% cover no-repeat;
-  width: 40rem;
+  width: 100%;
+  max-width: 40rem;
 }
 
 /* 짝수 번째 li들이 아래로 내려감 */
@@ -72,10 +75,18 @@
   .myWork .workList li {
     height: 30rem;
   }
+  .myWork .workList li img {
+    width: 100%;
+  }
 
   .myWork .workList li h3 {
     text-align: center;
     padding: 0;
     padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .myWork .workList {
+    grid-gap: 0;
   }
 }

@@ -18,11 +18,11 @@
   padding-right: 6rem;
   width: 69.4rem;
 }
-.resume .cvContents h2 {
+.resume .cvContents h3 {
   text-align: start;
   padding-bottom: 4rem;
 }
-.resume .cvContents h2 span {
+.resume .cvContents h3 span {
   color: var(--color-mb);
 }
 
@@ -58,6 +58,7 @@
   border-radius: 3rem;
   z-index: 3;
   position: relative;
+  bottom: 4rem;
 }
 .squareImage::before {
   content: '';
@@ -95,6 +96,7 @@
   .resume .cvContents .cvBtn {
     display: flex;
     flex-direction: column;
+    z-index: 10;
   }
 }
 
@@ -110,10 +112,37 @@
     order: 2;
     align-items: center;
     padding-left: 6rem;
-
   }
   .resume .squareImage {
     order: 1;
-    margin-bottom: 3rem;
+    margin-bottom: -3rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .resume .inner {
+    padding: 0;
+  }
+  .resume .cvContents h2 {
+    z-index: 10;
+    padding-bottom: 0;
+    font-size: 2.6rem;
+  }
+
+  /* 움직이는 동그라미 */
+  .squareImage::before {
+    width: 12rem;
+    height: 12rem;
+    right: 20rem;
+  }
+  .squareImage img {
+    transform: scale(0.6);
+    margin-bottom: -6rem;
+  }
+
+  .resume .cvContents .contact,
+  .resume .cvContents .download {
+    padding: 1.4rem;
+    width: 29rem;
   }
 }
