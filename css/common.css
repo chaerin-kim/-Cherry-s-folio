@@ -22,6 +22,7 @@ body {
   line-height: 146.5%;
 }
 
+
 h1,
 h2,
 h3,
@@ -72,10 +73,7 @@ h6 {
   align-items: center;
 }
 /* logo */
-.hd > .mw > h1 > a {
-  display: flex;
-  width: 30.3rem;
-}
+
 
 .hd > .mw > .gnb {
   height: 9.2rem;
@@ -340,6 +338,9 @@ section .DisplayText::after {
 }
 
 @media screen and (max-width: 560px) {
+  h1 a img {
+    width: 22rem;
+  }
   h2 {
     font-size: 4rem;
     padding-bottom: 3rem;
@@ -356,6 +357,8 @@ section .DisplayText::after {
   h6 {
     font-size: 2.4rem;
   }
+
+
 
   .hd .mw,
   section .mw {
