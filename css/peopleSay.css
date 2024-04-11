@@ -1,0 +1,90 @@
+.peopleSay {
+  height: 97.5rem;
+  overflow: hidden;
+}
+.peopleSay .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.peopleSay .bg {
+  background-color: #ffebe5;
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 20%;
+  padding-top: 19.3rem;
+  bottom: 40rem;
+
+  position: absolute;
+  overflow: hidden;
+  width: calc(100% - 4rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 작은 원 */
+.peopleSay .bg::before {
+  background-color: #fedcff;
+}
+/* 큰 원 */
+.peopleSay .bg::after {
+  background-color: #ffdada;
+  z-index: -3;
+}
+
+.peopleSay .slide {
+  position: absolute;
+  top: 41.3rem;
+  border-radius: 4.8rem;
+  box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
+}
+
+.peopleSay .titleBox .DisplayText {
+  padding: 9.4rem 8.6rem;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 6rem;
+}
+.peopleSay .titleBox .DisplayText .people1 .name {
+  padding-bottom: 3rem;
+}
+.peopleSay .titleBox .DisplayText .people1 img {
+  position: absolute;
+  right: 8.9rem;
+  top: 11.4rem;
+}
+
+.peopleSay .titleBox .DisplayText .circleImage img {
+  border-radius: 100%;
+}
+
+/* 버튼 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-wh);
+}
+.peopleSay .next1,
+.peopleSay .prev1 {
+  position: absolute;
+  top: 24rem;
+  border: 4px solid white;
+  width: 7.6rem;
+  height: 7.6rem;
+  border-radius: 50%;
+  left: 76%;
+  transform: translateX(40%);
+}
+.peopleSay .prev1 {
+  transform: translateX(calc(50% - 100px));
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: large;
+}
+
+@media screen and (max-width: 1300px) {
+  .peopleSay {
+    display: none;
+  }
+}

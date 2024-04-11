@@ -1,0 +1,378 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600;700&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+  font-size: 10px;
+  --color-mb: #527ceb;
+  --color-bp: #3c2b4a;
+  --color-lg: #5f5f5f;
+  --color-iv: #fff8f3;
+  --color-sp: #ffd7d7;
+  --color-sb: #e7f4f5;
+  --color-wh: #ffffff;
+}
+
+body {
+  color: #5f5f5f;
+  font-family: 'Lexend Deca';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 146.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3c2b4a;
+  font-family: 'Cormorant Infant';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+h1 {
+  font-size: 75px;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 35px;
+}
+h5 {
+  font-size: 30px;
+}
+h6 {
+  font-size: 25px;
+}
+.wrap {
+  overflow: hidden;
+}
+/* wrap > hd > mw > h1 + .gnb + ham */
+.hd {
+  z-index: 999;
+}
+
+.mw {
+  max-width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* logo */
+
+.hd > .mw > .gnb {
+  height: 9.2rem;
+  padding: 2.9rem 0rem;
+  background-color: #ffff;
+}
+.hd > .mw > .gnb > a {
+  font-size: 2rem;
+  padding: 0 3.2rem;
+  font-style: normal;
+  color: #2f2f2f;
+  background-color: var(--color-wh);
+}
+
+.hd .gnb a:hover {
+  color: var(--color-mb);
+}
+
+/* 햄버거바 부분 */
+.hd .icon {
+  display: flex;
+  justify-items: center;
+  color: var(--color-lg);
+  font-size: 4rem;
+  z-index: 200;
+  display: none;
+}
+
+section {
+  position: relative;
+  margin-bottom: 20rem;
+}
+
+/* mainVisual 섹션 */
+section .bg {
+  border-radius: 4.5rem;
+  background: #eef2fd;
+  width: calc(100% - 4rem);
+  height: 54.4rem;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 8.9rem;
+
+  /* 기준 바뀜 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 꾸밈 요소 */
+.mainVisual {
+  padding-bottom: 40rem;
+}
+section .bg::before,
+section .bg::after {
+  content: '';
+  position: absolute;
+  background-color: #fedcff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+/* 작은원 */
+section .bg::before {
+  width: 11.6rem;
+  height: 11.6rem;
+  left: 15.5rem;
+  bottom: 7.2rem;
+}
+/* 큰원 */
+section .bg::after {
+  width: 114.6rem;
+  height: 114.6rem;
+  bottom: 7.6rem;
+  left: 71.5rem;
+}
+
+.mainVisual .bg img {
+  height: 4.8rem;
+  padding-right: 2.8rem;
+}
+.mainVisual .bg span {
+  z-index: 2;
+}
+
+/* c-pattern ~ 순서대로 위치 조정 */
+.mainVisual img[alt='c-pattern'] {
+  position: absolute;
+  top: 6.6rem;
+  left: 28.4rem;
+}
+.mainVisual img[alt='polygon-1'] {
+  position: absolute;
+  top: 60.7rem;
+  right: 13.22rem;
+}
+.mainVisual img[alt='polygon-2'] {
+  position: absolute;
+  top: 7.71rem;
+  right: 38.8rem;
+}
+.mainVisual img[alt='pattern'] {
+  position: absolute;
+  left: 10rem;
+  top: 70.7rem;
+}
+
+/* 중앙 scroll down 원 */
+.mainVisual .titleBox::before {
+  content: '';
+  width: 41.2rem;
+  height: 41.2rem;
+  position: absolute;
+  border-radius: 41.2rem;
+  background: #e3f5ff;
+  bottom: -12.2rem;
+  z-index: -4;
+}
+.titleBox.mw {
+  width: 70% !important;
+}
+/* titleBox */
+.mainVisual .titleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20.3rem;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+section .titleBox .DisplayText {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4.6rem;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 52px 56px 0px rgba(187, 231, 255, 0.25);
+  backdrop-filter: blur(42.5px);
+  padding: 8.9rem 10.1rem;
+}
+.mainVisual .titleBox .DisplayText p {
+  padding-bottom: 4rem;
+  font-family: 'Cormorant Infant';
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
+
+/* more Information 버튼 */
+.mainVisual .titleBox .DisplayText p > span {
+  color: var(--color-mb);
+}
+.mainVisual .titleBox .DisplayText .btnBlue {
+  display: flex;
+  padding: 2.8rem 6.3rem;
+  border-radius: 20rem;
+  background: #527ceb;
+  border: none;
+}
+.mainVisual .titleBox .DisplayText .btnBlue h6 {
+  color: white;
+}
+
+/* scroll down부분  */
+section .DisplayText::before {
+  content: 'Scroll down';
+  position: absolute;
+  bottom: -10rem;
+  color: var(--color-bp);
+}
+section .DisplayText::after {
+  content: url(../img/mainVisual/mouse-scroll.svg);
+  position: absolute;
+  bottom: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 헤더반응형 */
+@media screen and (max-width: 1150px) {
+  section .bg {
+    border-radius: 0;
+  }
+  section .bg::after {
+    left: 14.66rem;
+  }
+  .mainVisual img[alt='polygon-1'] {
+    right: 4.08rem;
+  }
+  .mainVisual img[alt='polygon-2'] {
+    right: 4.08rem;
+  }
+
+  .mainVisual img[alt='c-pattern'] {
+    left: -4.03rem;
+  }
+  .mainVisual img[alt='pattern'] {
+    left: 2.03rem;
+  }
+
+  /* 햄버거는 반응형일때 기본으로 보임 */
+  .hd .icon {
+    display: flex;
+  }
+  .hd .icon .close {
+    display: none;
+  }
+  /* gnb부분 */
+  .hd > .mw > .gnb {
+    padding: 0;
+  }
+  .hd .gnb {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    display: none;
+  }
+  .gnb.blur::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -10;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .hd > .mw > .gnb > a {
+    padding: 2.4rem;
+  }
+
+  /* 햄버거바 클릭시 보이게 */
+  .hd .gnb.on {
+    display: flex;
+  }
+  .hd .icon .close.on {
+    display: flex;
+    position: fixed;
+    margin-top: -2.4rem;
+  }
+
+  .mainVisual .titleBox .DisplayText p {
+    font-size: 3.5rem;
+  }
+  .mainVisual .titleBox .DisplayText .btnBlue {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  h1 a img {
+    width: 22rem;
+  }
+  h2 {
+    font-size: 4rem;
+    padding-bottom: 3rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.8rem;
+  }
+  h5 {
+    font-size: 2.6rem;
+  }
+  h6 {
+    font-size: 2.4rem;
+  }
+
+  .hd .mw,
+  section .mw {
+    width: calc(100% - 2rem);
+    /* max-width: 80%; */
+  }
+
+  .mainVisual .titleBox::before {
+    scale: 0.6;
+    bottom: -24rem;
+  }
+  section .titleBox .DisplayText {
+    padding: 4rem;
+  }
+  .mainVisual img[alt='polygon-1'],
+  .mainVisual img[alt='polygon-2'],
+  .mainVisual img[alt='c-pattern'],
+  .mainVisual img[alt='pattern'] {
+    display: none;
+  }
+}
