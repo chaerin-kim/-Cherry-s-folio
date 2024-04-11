@@ -22,7 +22,6 @@ body {
   line-height: 146.5%;
 }
 
-
 h1,
 h2,
 h3,
@@ -74,7 +73,6 @@ h6 {
 }
 /* logo */
 
-
 .hd > .mw > .gnb {
   height: 9.2rem;
   padding: 2.9rem 0rem;
@@ -111,7 +109,7 @@ section {
 section .bg {
   border-radius: 4.5rem;
   background: #eef2fd;
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   height: 54.4rem;
   display: flex;
   justify-content: center;
@@ -357,8 +355,6 @@ section .DisplayText::after {
   h6 {
     font-size: 2.4rem;
   }
-
-
 
   .hd .mw,
   section .mw {

@@ -14,11 +14,13 @@
   justify-content: flex-start;
   padding-left: 20%;
   padding-top: 19.3rem;
+  bottom: 40rem;
 
-  /* 기준 바뀜 */
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  width: 100%;
+  width: calc(100% - 4rem);
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* 작은 원 */
 .peopleSay .bg::before {
